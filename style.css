@@ -5,12 +5,12 @@
 }
 
 body {
-  background: #f6f6f6;
+  background: #ffffff;
   font-family: 'Lato', sans-serif;
 }
 
 body > header {
-  background: #111;
+  background: #802d2d;
   color: white;
   font-size: 24px;
   padding: 20px 0;
@@ -23,7 +23,7 @@ body > header {
 }
 
 body > main {
-  background: #fff;
+  background: #ffffff;
   padding: 0 30px 30px;
 }
 
@@ -60,18 +60,18 @@ table {
 }
 
 table thead tr {
-  border-bottom: 3px solid #eee;
+  border-bottom: 3px solid #802d2d;
 }
 
 table thead tr th {
   text-align: left;
   padding-bottom: 10px;
   text-transform: uppercase;
-  color: #666;
+  color: #802d2d;
 }
 
 table tbody tr {
-  border-bottom: 3px solid #eee;
+  border-bottom: 3px solid #802d2d;
 }
 
 table tbody tr:last-child {
@@ -105,11 +105,11 @@ table tbody tr td {
 }
 
 .product .info .category {
-  color: #666;
+  color: #802d2d;
 }
 
 .qty {
-  background: #eee;
+  background: #ffffff;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
