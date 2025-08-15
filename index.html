@@ -4,21 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrinho de Compras</title>
-    <link rel="stylesheet" href="/cleonice_carrinho_de_compra/style/style.css" />
+    <title>Mercado do Celeiro - Carrinho</title>
+    <link rel="stylesheet" href="style/style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body>
     <header>
-      <span>Carrinho de compras</b></span>
+      <div class="header-content">
+        <div class="logo">
+          <i class='bx bxs-basket'></i>
+          <span>Mercado do Celeiro</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn-account">
+            <i class='bx bx-user'></i>
+          </button>
+          <div class="cart-icon">
+            <i class='bx bxs-cart-alt'></i>
+            <span class="cart-count">3</span>
+          </div>
+        </div>
+      </div>
     </header>
+    
+    <nav class="breadcrumb">
+      <ul>
+        <li><a href="#"><i class='bx bx-home'></i> Home</a></li>
+        <li><i class='bx bx-chevron-right'></i></li>
+        <li><a href="#">Produtos</a></li>
+        <li><i class='bx bx-chevron-right'></i></li>
+        <li>Carrinho</li>
+      </ul>
+    </nav>
+    
     <main>
-      <div class="page-title">Seu Carrinho</div>
+      <div class="page-title animate__animated animate__fadeIn">Seu Carrinho <i class='bx bxs-cart-alt'></i></div>
+      
       <div class="content">
         <section>
+          <div class="cart-actions">
+            <button class="btn-continue">
+              <i class='bx bx-chevron-left'></i> Continuar Comprando
+            </button>
+            <div class="cart-summary-mobile">
+              <span>3 itens</span>
+              <span>Total: R$ 418,00</span>
+            </div>
+          </div>
+          
           <table>
             <thead>
               <tr>
@@ -26,21 +63,22 @@
                 <th>Preço</th>
                 <th>Quantidade</th>
                 <th>Total</th>
-                <th>-</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="animate__animated animate__fadeInUp">
                 <td>
                   <div class="product">
-                    <img src="https://picsum.photos/100/120" alt="" />
+                    <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=100&h=120&fit=crop" alt="Saco de grãos" />
                     <div class="info">
-                      <div class="name">Nome do produto</div>
-                      <div class="category">Categoria</div>
+                      <div class="name">Grãos de Soja Premium</div>
+                      <div class="category">Grãos e Cereais</div>
+                      <div class="stock">Em estoque</div>
                     </div>
                   </div>
                 </td>
-                <td>R$ 120</td>
+                <td>R$ 120,00</td>
                 <td>
                   <div class="qty">
                     <button><i class="bx bx-minus"></i></button>
@@ -48,81 +86,149 @@
                     <button><i class="bx bx-plus"></i></button>
                   </div>
                 </td>
-                <td>R$ 240</td>
+                <td>R$ 240,00</td>
                 <td>
                   <button class="remove"><i class="bx bx-x"></i></button>
                 </td>
               </tr>
-              <tr>
+              <tr class="animate__animated animate__fadeInUp animate__delay-1s">
                 <td>
                   <div class="product">
-                    <img src="https://picsum.photos/100/120" alt="" />
+                    <img src="https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?w=100&h=120&fit=crop" alt="Feno" />
                     <div class="info">
-                      <div class="name">Nome do produto</div>
-                      <div class="category">Categoria</div>
+                      <div class="name">Feno de Qualidade</div>
+                      <div class="category">Alimentos para Animais</div>
+                      <div class="stock">Em estoque</div>
                     </div>
                   </div>
                 </td>
-                <td>R$ 120</td>
+                <td>R$ 89,00</td>
                 <td>
                   <div class="qty">
                     <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
+                    <span>1</span>
                     <button><i class="bx bx-plus"></i></button>
                   </div>
                 </td>
-                <td>R$ 240</td>
+                <td>R$ 89,00</td>
                 <td>
                   <button class="remove"><i class="bx bx-x"></i></button>
                 </td>
               </tr>
-              <tr>
+              <tr class="animate__animated animate__fadeInUp animate__delay-2s">
                 <td>
                   <div class="product">
-                    <img src="https://picsum.photos/100/120" alt="" />
+                    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=100&h=120&fit=crop" alt="Ferramentas" />
                     <div class="info">
-                      <div class="name">Nome do produto</div>
-                      <div class="category">Categoria</div>
+                      <div class="name">Kit Ferramentas Agrícolas</div>
+                      <div class="category">Ferramentas</div>
+                      <div class="stock-warning">Últimas unidades!</div>
                     </div>
                   </div>
                 </td>
-                <td>R$ 120</td>
+                <td>R$ 89,00</td>
                 <td>
                   <div class="qty">
                     <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
+                    <span>1</span>
                     <button><i class="bx bx-plus"></i></button>
                   </div>
                 </td>
-                <td>R$ 240</td>
+                <td>R$ 89,00</td>
                 <td>
                   <button class="remove"><i class="bx bx-x"></i></button>
                 </td>
               </tr>
             </tbody>
           </table>
+          
+          <div class="coupon-section">
+            <div class="coupon-input">
+              <input type="text" placeholder="Código do cupom">
+              <button class="btn-apply">Aplicar</button>
+            </div>
+            <button class="btn-clear">Limpar Carrinho</button>
+          </div>
         </section>
+        
         <aside>
-          <div class="box">
+          <div class="box summary-box">
             <header>Resumo da compra</header>
             <div class="info">
-              <div><span>Sub-total</span><span>R$ 418</span></div>
+              <div><span>Sub-total</span><span>R$ 418,00</span></div>
               <div><span>Frete</span><span>Gratuito</span></div>
-              <div>
+              <div class="discount">
+                <span>Desconto</span>
+                <span>- R$ 0,00</span>
+              </div>
+              <div class="coupon">
                 <button>
-                  Adicionar cupom de desconto
-                  <i class="bx bx-right-arrow-alt"></i>
+                  <i class='bx bx-tag-alt'></i> Adicionar cupom
+                  <i class='bx bx-right-arrow-alt'></i>
                 </button>
               </div>
             </div>
             <footer>
               <span>Total</span>
-              <span>R$ 418</span>
+              <span>R$ 418,00</span>
             </footer>
           </div>
-          <button>Finalizar Compra</button>
+          
+          <button class="btn-checkout animate__animated animate__pulse animate__infinite">Finalizar Compra</button>
+          
+          <div class="payment-methods">
+            <p>Métodos de pagamento:</p>
+            <div class="payment-icons">
+              <i class='bx bxl-visa'></i>
+              <i class='bx bxl-mastercard'></i>
+              <i class='bx bxl-paypal'></i>
+              <i class='bx bx-barcode'></i>
+            </div>
+          </div>
+          
+          <div class="security-info">
+            <i class='bx bx-lock-alt'></i>
+            <span>Compra 100% segura</span>
+          </div>
         </aside>
       </div>
     </main>
+    
+    <footer class="page-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mercado do Celeiro</h3>
+          <p>Tudo para seu sítio, fazenda e animais</p>
+          <div class="social-icons">
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-instagram-alt'></i>
+            <i class='bx bxl-whatsapp'></i>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Institucional</h3>
+          <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Nossas lojas</a></li>
+            <li><a href="#">Trabalhe conosco</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Atendimento</h3>
+          <ul>
+            <li><i class='bx bx-phone'></i> (99) 9999-9999</li>
+            <li><i class='bx bx-envelope'></i> contato@mercadodoceleiro.com</li>
+            <li><i class='bx bx-time'></i> Seg-Sex: 8h às 18h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Mercado do Celeiro. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    
+    <div class="floating-button">
+      <i class='bx bxs-offer'></i> Ofertas do dia!
+    </div>
   </body>
 </html>
