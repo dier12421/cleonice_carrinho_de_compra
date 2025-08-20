@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado do Celeiro - Login</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class='bx bxs-basket'></i>
+                <span>Mercado do Celeiro</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn-account">
+                    <i class='bx bx-user'></i>
+                </button>
+                <div class="cart-icon">
+                    <i class='bx bxs-cart-alt'></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="breadcrumb">
+        <ul>
+            <li><a href="index.html"><i class='bx bx-home'></i> Home</a></li>
+            <li><i class='bx bx-chevron-right'></i></li>
+            <li>Login</li>
+        </ul>
+    </nav>
+    
+    <main class="auth-container">
+        <div class="auth-box animate__animated animate__fadeIn">
+            <h1>Entrar na minha conta</h1>
+            <p>Informe seus dados de acesso</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" class="toggle-password" aria-label="Mostrar senha">
+                            <i class='bx bx-hide'></i>
+                        </button>
+                    </div>
+                    <a href="#" class="forgot-password">Esqueci minha senha</a>
+                </div>
+                
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            
+            <div class="auth-divider">
+                <span>ou</span>
+            </div>
+            
+            <button class="btn-social google-login">
+                <i class='bx bxl-google'></i> Entrar com Google
+            </button>
+            
+            <button class="btn-social facebook-login">
+                <i class='bx bxl-facebook'></i> Entrar com Facebook
+            </button>
+            
+            <div class="auth-footer">
+                Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="page-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mercado do Celeiro</h3>
+                <p>Tudo para seu sítio, fazenda e animais</p>
+                <div class="social-icons">
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-whatsapp'></i>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Nossas lojas</a></li>
+                    <li><a href="#">Trabalhe conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Atendimento</h3>
+                <ul>
+                    <li><i class='bx bx-phone'></i> (99) 9999-9999</li>
+                    <li><i class='bx bx-envelope'></i> contato@mercadodoceleiro.com</li>
+                    <li><i class='bx bx-time'></i> Seg-Sex: 8h às 18h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Mercado do Celeiro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
