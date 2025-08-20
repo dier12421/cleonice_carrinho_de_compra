@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 :root {
-  --primary-color: #5a8f3d;
-  --secondary-color: #802d2d;
-  --light-color: #f8f9fa;
-  --dark-color: #343a40;
-  --success-color: #28a745;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --border-radius: 8px;
-  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --verde: #5a8f3d;
+  --marrom: #802d2d;
+  --cinza-claro: #f8f9fa;
+  --cinza-escuro: #343a40;
+  --sucesso: #28a745;
+  --alerta: #ffc107;
+  --erro: #dc3545;
+  --borda: 8px;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -21,14 +21,15 @@ body {
   background: #f5f5f5;
   font-family: 'Lato', sans-serif;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
+/* Cabeçalho */
 header {
-  background: var(--primary-color);
+  background: var(--verde);
   color: white;
   padding: 15px 0;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--sombra);
 }
 
 .header-content {
@@ -43,55 +44,49 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .logo i {
-  font-size: 28px;
+  font-size: 26px;
   margin-right: 10px;
 }
 
 .header-actions {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
-.btn-account {
-  background: transparent;
-  border: none;
+.btn-account, .cart-icon {
+  font-size: 22px;
   color: white;
-  font-size: 24px;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.btn-account:hover {
-  transform: scale(1.1);
 }
 
 .cart-icon {
   position: relative;
-  font-size: 24px;
 }
 
 .cart-count {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  background: var(--secondary-color);
+  top: -8px;
+  right: -8px;
+  background: var(--marrom);
   color: white;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
 }
 
+/* Navegação */
 .breadcrumb {
   background: #e9ecef;
   padding: 10px 0;
@@ -113,50 +108,42 @@ header {
 }
 
 .breadcrumb a {
-  color: var(--primary-color);
+  color: var(--verde);
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: var(--secondary-color);
   text-decoration: underline;
 }
 
 .breadcrumb i {
   margin: 0 5px;
-  font-size: 12px;
 }
 
+/* Conteúdo principal */
 main {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto 40px;
   padding: 20px;
-  background: #ffffff;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  margin-top: 20px;
-  margin-bottom: 40px;
+  background: white;
+  border-radius: var(--borda);
+  box-shadow: var(--sombra);
 }
 
 .page-title {
-  font-size: 32px;
-  padding: 30px 0;
+  font-size: 28px;
+  padding: 20px 0;
   text-align: center;
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  color: var(--verde);
 }
 
 .page-title i {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .content {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 section {
@@ -166,25 +153,24 @@ section {
 .cart-actions {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 20px;
 }
 
 .btn-continue {
   background: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 1px solid var(--verde);
+  color: var(--verde);
   padding: 8px 15px;
-  border-radius: var(--border-radius);
+  border-radius: var(--borda);
   display: flex;
   align-items: center;
   gap: 5px;
   font-weight: 600;
-  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .btn-continue:hover {
-  background: var(--primary-color);
+  background: var(--verde);
   color: white;
 }
 
@@ -193,6 +179,7 @@ section {
   font-weight: 600;
 }
 
+/* Tabela */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -200,29 +187,19 @@ table {
 }
 
 table thead tr {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--verde);
 }
 
-table thead tr th {
+table th {
   text-align: left;
+  padding: 12px 10px;
+  color: var(--verde);
+  font-weight: bold;
+}
+
+table td {
   padding: 15px 10px;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  font-weight: 700;
-  font-size: 14px;
-}
-
-table tbody tr {
   border-bottom: 1px solid #ddd;
-}
-
-table tbody tr:last-child {
-  border: 0;
-}
-
-table tbody tr td {
-  padding: 20px 10px;
-  vertical-align: middle;
 }
 
 .product {
@@ -231,49 +208,42 @@ table tbody tr td {
 }
 
 .product img {
-  border-radius: var(--border-radius);
-  width: 80px;
-  height: 80px;
+  border-radius: var(--borda);
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  border: 1px solid #eee;
+  margin-right: 15px;
 }
 
-.product .info {
-  margin-left: 15px;
-}
-
-.product .info .name {
-  font-size: 16px;
-  margin-bottom: 5px;
+.product .name {
   font-weight: 600;
+  margin-bottom: 5px;
 }
 
-.product .info .category {
-  color: var(--primary-color);
+.product .category {
+  color: var(--verde);
   font-size: 14px;
   margin-bottom: 5px;
 }
 
-.product .info .stock {
-  color: var(--success-color);
+.product .stock {
+  color: var(--sucesso);
   font-size: 12px;
   font-weight: 600;
 }
 
-.product .info .stock-warning {
-  color: var(--warning-color);
+.product .stock-warning {
+  color: var(--alerta);
   font-size: 12px;
   font-weight: 600;
 }
 
 .qty {
-  background: #f8f9fa;
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 100px;
-  border-radius: var(--border-radius);
-  overflow: hidden;
+  width: 100px;
+  border-radius: var(--borda);
   height: 35px;
   border: 1px solid #ddd;
 }
@@ -284,20 +254,12 @@ table tbody tr td {
 }
 
 .qty button {
-  display: flex;
-  align-items: center;
   background: #f1f1f1;
   border: 0;
-  padding: 0 15px;
+  padding: 0 12px;
   font-size: 16px;
   height: 100%;
-  color: var(--dark-color);
-  transition: all 0.3s;
-}
-
-.qty button:hover {
-  background: #ddd;
-  color: var(--primary-color);
+  cursor: pointer;
 }
 
 .remove {
@@ -310,25 +272,24 @@ table tbody tr td {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: var(--danger-color);
-  transition: all 0.3s;
+  color: var(--erro);
+  cursor: pointer;
 }
 
 .remove:hover {
-  background: var(--danger-color);
+  background: var(--erro);
   color: white;
 }
 
+/* Cupom */
 .coupon-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .coupon-input {
   display: flex;
-  align-items: center;
   flex: 1;
   max-width: 400px;
 }
@@ -337,113 +298,86 @@ table tbody tr td {
   flex: 1;
   padding: 10px 15px;
   border: 1px solid #ddd;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-  font-family: 'Lato', sans-serif;
-  outline: none;
-}
-
-.coupon-input input:focus {
-  border-color: var(--primary-color);
+  border-radius: var(--borda) 0 0 var(--borda);
 }
 
 .btn-apply {
-  background: var(--primary-color);
+  background: var(--verde);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  padding: 10px 15px;
+  border-radius: 0 var(--borda) var(--borda) 0;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-apply:hover {
-  background: #4a7b32;
 }
 
 .btn-clear {
   background: transparent;
-  border: 1px solid var(--danger-color);
-  color: var(--danger-color);
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
+  border: 1px solid var(--erro);
+  color: var(--erro);
+  padding: 10px 15px;
+  border-radius: var(--borda);
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
 .btn-clear:hover {
-  background: var(--danger-color);
+  background: var(--erro);
   color: white;
 }
 
+/* Resumo */
 aside {
-  width: 350px;
+  width: 320px;
 }
 
 .box {
-  margin-bottom: 20px;
   border: 1px solid #ddd;
-  background: white;
-  color: #333;
-  border-radius: var(--border-radius);
+  border-radius: var(--borda);
+  margin-bottom: 20px;
   overflow: hidden;
-  box-shadow: var(--box-shadow);
 }
 
 .box header {
-  padding: 15px 20px;
-  font-size: 18px;
-  font-weight: 700;
+  padding: 12px 15px;
+  font-weight: bold;
   border-bottom: 1px solid #ddd;
   background: #f8f9fa;
-  color: var(--primary-color);
+  color: var(--verde);
 }
 
 .box .info {
-  padding: 20px;
+  padding: 15px;
 }
 
 .box .info > div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
-  color: #555;
+  margin-bottom: 12px;
 }
 
-.box .info > div:last-child {
-  margin: 0;
-}
-
-.box .info .discount {
-  color: var(--danger-color);
+.box .discount {
+  color: var(--erro);
   font-weight: 600;
 }
 
-.box .info .coupon button {
-  color: var(--primary-color);
+.box .coupon button {
+  color: var(--verde);
   background: transparent;
   border: 0;
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 16px;
   font-weight: 600;
   width: 100%;
   cursor: pointer;
   padding: 5px 0;
-  transition: color 0.3s;
-}
-
-.box .info .coupon button:hover {
-  color: var(--secondary-color);
 }
 
 .box footer {
-  padding: 15px 20px;
+  padding: 12px 15px;
   background: #f8f9fa;
-  font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #ddd;
@@ -451,64 +385,68 @@ aside {
 
 .btn-checkout {
   border: 0;
-  padding: 15px 0;
+  padding: 12px 0;
   color: white;
-  background: var(--success-color);
-  display: block;
+  background: var(--sucesso);
   width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: var(--border-radius);
-  margin-bottom: 20px;
+  font-weight: bold;
+  border-radius: var(--borda);
+  margin-bottom: 15px;
   cursor: pointer;
-  transition: background 0.3s;
-  box-shadow: var(--box-shadow);
 }
 
-.btn-checkout:hover {
-  background: #218838;
+.auth-links {
+  background: white;
+  border-radius: var(--borda);
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.auth-links p {
+  margin: 8px 0;
+}
+
+.auth-links a {
+  color: var(--verde);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
 }
 
 .payment-methods {
   background: white;
-  border-radius: var(--border-radius);
+  border-radius: var(--borda);
   padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: var(--box-shadow);
+  margin-bottom: 15px;
 }
 
 .payment-methods p {
   margin-bottom: 10px;
-  font-size: 14px;
-  color: #666;
 }
 
 .payment-icons {
   display: flex;
-  gap: 15px;
-  font-size: 24px;
-  color: #555;
+  gap: 12px;
+  font-size: 22px;
 }
 
 .security-info {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--success-color);
+  gap: 8px;
+  color: var(--sucesso);
   font-weight: 600;
-  font-size: 14px;
 }
 
-.security-info i {
-  font-size: 20px;
-}
-
+/* Rodapé */
 .page-footer {
-  background: var(--dark-color);
+  background: var(--cinza-escuro);
   color: white;
-  padding: 40px 0 20px;
+  padding: 30px 0 15px;
 }
 
 .footer-content {
@@ -517,22 +455,15 @@ aside {
   padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.footer-section {
-  margin-bottom: 20px;
+  gap: 20px;
 }
 
 .footer-section h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: var(--light-color);
+  margin-bottom: 12px;
 }
 
 .footer-section p {
-  font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   opacity: 0.8;
 }
 
@@ -541,74 +472,52 @@ aside {
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  opacity: 0.8;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.footer-section ul li i {
-  font-size: 16px;
+  opacity: 0.8;
 }
 
 .footer-section a {
   color: white;
   text-decoration: none;
-  transition: opacity 0.3s;
 }
 
 .footer-section a:hover {
-  opacity: 0.7;
   text-decoration: underline;
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
-  font-size: 24px;
-}
-
-.social-icons i {
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.social-icons i:hover {
-  color: var(--primary-color);
+  gap: 12px;
+  font-size: 22px;
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
-  margin-top: 20px;
+  padding-top: 15px;
+  margin-top: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 12px;
   opacity: 0.7;
 }
 
+/* Botão flutuante */
 .floating-button {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: var(--secondary-color);
+  bottom: 20px;
+  right: 20px;
+  background: var(--marrom);
   color: white;
-  padding: 15px 20px;
-  border-radius: 50px;
+  padding: 12px 18px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  z-index: 100;
-  transition: all 0.3s;
-}
-
-.floating-button:hover {
-  background: #6a3a3a;
-  transform: translateY(-3px);
 }
 
 /* Responsividade */
@@ -619,50 +528,48 @@ aside {
   
   aside {
     width: 100%;
-    margin-left: 0;
   }
 }
 
 @media (max-width: 768px) {
   .cart-summary-mobile {
     display: flex;
-    gap: 15px;
+    gap: 12px;
   }
   
   table thead {
     display: none;
   }
   
-  table tbody tr {
+  table tr {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    padding: 15px;
+    border-radius: var(--borda);
+    padding: 12px;
   }
   
-  table tbody tr td {
+  table td {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
   }
   
-  table tbody tr td:last-child {
+  table td:last-child {
     border-bottom: none;
   }
   
-  table tbody tr td::before {
+  table td::before {
     content: attr(data-label);
     font-weight: bold;
-    color: var(--primary-color);
-    margin-right: 15px;
+    color: var(--verde);
+    margin-right: 10px;
   }
   
   .coupon-section {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
   
   .coupon-input {
@@ -673,7 +580,7 @@ aside {
 @media (max-width: 576px) {
   .header-content {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
   
   .page-title {
@@ -681,9 +588,9 @@ aside {
   }
   
   .floating-button {
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     font-size: 14px;
-    padding: 12px 15px;
+    padding: 10px 15px;
   }
 }
